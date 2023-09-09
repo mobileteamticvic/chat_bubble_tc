@@ -1,18 +1,30 @@
 # chat_bubble_tc
 
-A new Flutter plugin project.
+Flutter chat bubble contains the widgets useful for the chat system. It contains the chat buble along with the time stamp denoting the usage sent time for it.
 
-## Getting Started
+# Getting Started 
+Add this to your `pubspec.yaml` file:
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+```
+dependencies:
+    chat_bubble_tc:
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Usage
+Then just import the package
+```
+import 'package:chat_bubble_tc/chat_bubble_tc.dart'
+```
 
-The plugin project was generated without specifying the `--platforms` flag, no platforms are currently supported.
-To add platforms, run `flutter create -t plugin --platforms <platforms> .` in this directory.
-You can also find a detailed instruction on how to add platforms in the `pubspec.yaml` at https://flutter.dev/docs/development/packages-and-plugins/developing-packages#plugin-platforms.
+# Example
+
+```
+ChatBubble(
+              message: "Receive example",
+              timeStamp: DateTime.now(),
+              isSendBubble: false,
+            )
+```
+
+# Isssue
+Please feel [free to reach us](https://github.com/mobileteamticvic/chat_bubble_tc/issues) in case of any issues
