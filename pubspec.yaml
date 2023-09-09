@@ -1,5 +1,5 @@
 name: chat_bubble_tc
-description: A new Flutter plugin project.
+description: Flutter plugin for chat system providing chat bubble widget
 version: 0.0.1
 homepage: https://github.com/mobileteamticvic/chat_bubble_tc
 
