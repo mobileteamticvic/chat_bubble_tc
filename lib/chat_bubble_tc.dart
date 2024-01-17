@@ -1,3 +1,4 @@
+import 'package:chat_bubble_tc/controller/chat_bubble_tc_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:timeago/timeago.dart' as timeago;
@@ -11,6 +12,7 @@ class ChatBubble extends StatelessWidget {
   final double? minWidth;
   final double? maxWidth;
   final bool isSendBubble;
+  final MsgRecipientStatus msgRecipientStatus;
   const ChatBubble({
     super.key,
     this.backgroundColor = Colors.green,
@@ -21,6 +23,7 @@ class ChatBubble extends StatelessWidget {
     this.minWidth,
     this.maxWidth,
     this.isSendBubble = false,
+    this.msgRecipientStatus = MsgRecipientStatus.none,
   });
 
   @override
@@ -80,13 +83,31 @@ class ChatBubble extends StatelessWidget {
                 // NOTE - time stamp section
                 Padding(
                   padding: const EdgeInsets.only(right: 10.0, bottom: 10),
-                  child: Text(
-                    timeago.format(timeStamp),
-                    style: textStyle ??
-                        GoogleFonts.josefinSans(
-                          color: const Color(0xFFADB5B8),
-                          fontSize: 12,
+                  child: Row(
+                    children: [
+                      Text(
+                        timeago.format(timeStamp),
+                        style: textStyle ??
+                            GoogleFonts.josefinSans(
+                              color: const Color(0xFFADB5B8),
+                              fontSize: 12,
+                            ),
+                      ),
+                      const SizedBox(
+                        width: 5,
+                      ),
+                      if (msgRecipientStatus != MsgRecipientStatus.none)
+                        Icon(
+                          ChatBubbleTcController.getMsgRecipientIconData(
+                            msgRecipientStatus,
+                          ),
+                          color:
+                              ChatBubbleTcController.getMsgRecipientIconColor(
+                            msgRecipientStatus,
+                          ),
+                          size: 15,
                         ),
+                    ],
                   ),
                 )
               ],
