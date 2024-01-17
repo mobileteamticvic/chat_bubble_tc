@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 enum MsgRecipientStatus {
   read,
   delivered,
+  offline,
   unRead,
   loading,
-  offline,
   none,
 }
 
