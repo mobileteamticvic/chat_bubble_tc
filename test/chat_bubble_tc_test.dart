@@ -1,11 +1,8 @@
-import 'dart:math';
-
 import 'package:chat_bubble_tc/controller/chat_bubble_tc_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 class MockChatBubbleTcPlatform {
-  @override
   Future<String?> getPlatformVersion() => Future.value('42');
 }
 

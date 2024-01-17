@@ -6,3 +6,9 @@ Addition of License and other support is carried out
 
 ## 0.0.3
 Update on the changelog has been carried out
+
+## 0.0.4
+Upgrade on the timeago package 
+
+## 0.0.5
+Addition of MsgRecipient status to widget
