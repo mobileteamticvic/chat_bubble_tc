@@ -12,3 +12,6 @@ Upgrade on the timeago package
 
 ## 0.0.5
 Addition of MsgRecipient status to widget
+
+## 0.0.6
+Internal package update 

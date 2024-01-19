@@ -8,7 +8,6 @@ class MockChatBubbleTcPlatform {
 
 void main() {
 //  final ChatBubbleTcPlatform initialPlatform = ChatBubbleTcPlatform.instance;
-
   // test('$MethodChannelChatBubbleTc is the default instance', () {
   //   expect(initialPlatform, isInstanceOf<MethodChannelChatBubbleTc>());
   // });
